@@ -2,9 +2,9 @@
 
 ## Setup & Run
 
-1. `pnpm install`
+1. `pnpm install` (or `npm install`)
 2. Copy `.env.example` to `.env` and fill required values
-3. `pnpm prisma:generate && pnpm prisma:migrate`
+3. `pnpm prisma:generate && pnpm prisma:migrate` (creates local SQLite DB)
 4. `pnpm db:seed`
 5. `pnpm dev` then open `http://localhost:3000` (login admin: `admin@local` / `ChangeMe123!`)
 

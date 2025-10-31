@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = env("DATABASE_PROVIDER") == "postgres" ? "postgresql" : "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  OPERATOR
+  VIEWER
+}
+
+model User {
+  id                 String   @id @default(cuid())
+  name               String?
+  email              String   @unique
+  username           String   @unique
+  passwordHash       String
+  role               Role     @default(VIEWER)
+  isActive           Boolean  @default(true)
+  mustChangePassword Boolean  @default(true)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Warehouse {
+  id    String @id @default(cuid())
+  code  String @unique
+  name  String
+}
+
+model Item {
+  id        String  @id @default(cuid())
+  code      String  @unique
+  name      String
+  unit      String  @default("pcs")
+  qtyPerDus Int
+  category  String?
+  isActive  Boolean @default(true)
+}
+
+model StockOpname {
+  id          String   @id @default(cuid())
+  date        DateTime
+  warehouse   Warehouse @relation(fields: [warehouseId], references: [id])
+  warehouseId String
+  item        Item      @relation(fields: [itemId], references: [id])
+  itemId      String
+  qtyFisik    Int
+  note        String?
+}
+
+enum MovementType {
+  MRD
+  FILLING
+  ADJ_IN
+  ADJ_OUT
+  TW_IN
+  TW_OUT
+}
+
+model Movement {
+  id             String        @id @default(cuid())
+  date           DateTime
+  type           MovementType
+  refNo          String
+  warehouseFrom  Warehouse?    @relation("warehouseFrom", fields: [warehouseFromId], references: [id])
+  warehouseFromId String?
+  warehouseTo    Warehouse?    @relation("warehouseTo", fields: [warehouseToId], references: [id])
+  warehouseToId  String?
+  item           Item          @relation(fields: [itemId], references: [id])
+  itemId         String
+  qty            Int
+  note           String?
+
+  @@index([date, itemId])
+  @@index([type, refNo])
+}
+
+model PeriodOpening {
+  id          String   @id @default(cuid())
+  periodMonth Int
+  periodYear  Int
+  warehouse   Warehouse @relation(fields: [warehouseId], references: [id])
+  warehouseId String
+  item        Item      @relation(fields: [itemId], references: [id])
+  itemId      String
+  openingQty  Int
+  @@unique([periodMonth, periodYear, warehouseId, itemId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  table     String
+  recordId  String?
+  diff      String?
+  createdAt DateTime @default(now())
+}
+
