@@ -2,8 +2,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Note: Prisma requires a concrete provider string here.
+// Default to SQLite for local dev. For Postgres, change to: "postgresql".
 datasource db {
-  provider = env("DATABASE_PROVIDER") == "postgres" ? "postgresql" : "sqlite"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -101,4 +103,3 @@ model AuditLog {
   diff      String?
   createdAt DateTime @default(now())
 }
-

@@ -9,11 +9,13 @@
 5. `pnpm dev` then open `http://localhost:3000` (login admin: `admin@local` / `ChangeMe123!`)
 
 If you don’t use pnpm, npm equivalents:
+
 - `npm install`
 - `npm run prisma:generate && npm run prisma:migrate`
 - `npm run db:seed`
 - `npm run dev`
 
 Generate a secure `NEXTAUTH_SECRET`:
+
 - OpenSSL: `openssl rand -base64 32`
 - Node: `node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"`
