@@ -138,6 +138,171 @@ Sertakan README dengan langkah setup, seeding, dan impor CSV.
 
 Hasilkan proyek lengkap beserta file Prisma schema, komponen UI, route API, seeder, dan README. Pastikan aplikasi bisa pnpm install && pnpm prisma migrate dev && pnpm dev.
 
+## Prompt: AUTH (Login/Logout), RBAC, & Keamanan
+
+Tambahkan modul autentikasi & otorisasi ke proyek Inventory Packaging (Next.js 14 + TypeScript + Prisma + SQLite/Postgres, Tailwind, shadcn/ui).
+
+### Fitur
+
+- Login via Credentials (email/username + password) + opsi Google SSO (opsional, bisa dimatikan via ENV).
+- Role-Based Access Control (RBAC): ADMIN, OPERATOR, VIEWER.
+- ADMIN: kelola master (Item, Gudang), semua CRUD, konfigurasi, lihat audit log.
+- OPERATOR: CRUD transaksi (MRD, FILLING, ADJ_IN, ADJ_OUT, TW), import CSV.
+- VIEWER: read-only semua laporan & dashboard.
+- Session via NextAuth (JWT), password hashing bcrypt.
+- Proteksi page: middleware cek role per route (contoh: /master/** hanya ADMIN).
+- Audit log: setiap perubahan simpan userId, timestamp, action, table, recordId, diff.
+- Rate limit endpoint login (5x/menit/IP), backoff exponential.
+- CSRF untuk POST/PUT/DELETE; Helmet headers; sanitasi input (Zod).
+- Kebijakan password: min 8 karakter, kombinasi (huruf+angka/simbol), force reset pertama kali.
+
+### Implementasi
+
+- Prisma model User(id, name, email UNIQUE, username UNIQUE, passwordHash, role, isActive, createdAt, updatedAt).
+- NextAuth Credentials provider + optional Google provider (tergantung ENV).
+- Halaman: /login, /logout, /profile (ganti password), /admin/users (kelola user, reset password, assign role).
+- Komponen: AuthGuard, RoleGate, RequireRole(roles: Role[]).
+- Seed: 3 user default (admin/operator/viewer) dengan password ChangeMe123! dan wajib prompt ganti saat login pertama.
+- Testing: unit test validasi password & authorization guard.
+
+### Acceptance Criteria
+
+- Akses tanpa login → redirect ke /login.
+- Pengguna VIEWER tidak bisa membuka form CRUD (tombol disabled + toast).
+- Log keluar otomatis setelah idle 30 menit (configurable).
+- Seluruh perubahan tercatat di AuditLog.
+- ENV dapat mematikan Google SSO dan hanya pakai Credentials.
+
+## Prompt: UI/UX Cantik & Produktif
+
+Rapikan UI/UX aplikasi dengan Tailwind + shadcn/ui dan prinsip dashboard modern.
+
+### Desain Sistem
+
+- Tema: Light & Dark mode (toggle), spacing konsisten, radius rounded-2xl, shadow lembut.
+- Typography: Inter/Plus Jakarta Sans; ukuran bervariasi (h1,h2,base,sm).
+- Warna status: hijau (ok), kuning (warning 1–5%), merah (>5%), abu (inactive).
+
+### Pola Layout
+
+- Sidebar (icon + label) : Dashboard, Stock, MRD, Filling, Adjust In, Adjust Out, TW, Master, Laporan, Admin.
+- Header: search bar, date range picker, user menu (profile, logout).
+- Breadcrumb di tiap halaman.
+
+### Komponen & Interaksi
+
+- Table Pro (shadcn Table):
+  - Sticky header, kolom bisa resize, pin, sort, multi-filter (text/date/number/range).
+  - Pagination, quick search (client), server-side filter (params).
+  - Tombol Export CSV/Excel + Import (drag & drop) di kanan-atas tabel.
+  - Row actions: Edit, Delete, View; konfirmasi modal untuk delete.
+  - Skeleton loading + empty state (ilustrasi + CTA import).
+- Form (shadcn Form, Dialog): validasi Zod, mask angka ribuan, datepicker, select item/gudang dengan typeahead.
+- Cards KPI (Dashboard): Total Masuk/Keluar/Adjust/TW (hari ini & bulan ini), tren mini (sparkline).
+- Grafik: Recharts (line & bar) untuk throughput harian; tooltip & legend responsif.
+- Badge status JALAN/TIDAK JALAN, chip persentase selisih dengan warna dinamis.
+- Keyboard shortcut: / = focus search, i = Import, n = New record, g s = ke Stock.
+
+### Aksesibilitas & Detail
+
+- Kontras warna AA, focus ring jelas, form label/aria lengkap.
+- Teks angka rata kanan; gunakan thousand separator & unit dus (otomatis hitung dus & sisa).
+- Toasts untuk sukses/error, retry saat network putus.
+
+### Acceptance Criteria
+
+- Tabel 10.000+ baris tetap lancar (virtualized rows).
+- Semua halaman responsif (≥320px), dark mode stabil.
+- Import CSV < 3 klik dari halaman mana pun.
+- Semua aksi penting ≤2 langkah dari halaman utama modul.
+
+## Prompt: Requirements, Setup, & Deploy
+
+Lengkapi proyek dengan dokumen requirement, .env contoh, skrip setup, dan instruksi deploy.
+
+### Prasyarat Teknis
+
+- Node.js 20 LTS, pnpm terbaru.
+- Database: default SQLite (dev) & Postgres (prod).
+- Alat: Git, OpenSSL (buat secret), dan CLI Prisma.
+
+### Dependensi Utama
+
+- next, react, typescript, prisma, @prisma/client
+- next-auth, bcrypt, zod, axios, dayjs
+- tailwindcss, @shadcn/ui, clsx
+- recharts, react-hook-form, @tanstack/react-table
+- csv-parse, papaparse/xlsx (export), zod-form-data
+
+### Struktur ENV & Contoh `.env.example`
+
+```
+# App
+NEXT_PUBLIC_APP_NAME=Inventory Packaging
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=replace_me # gunakan `openssl rand -base64 32`
+
+# DB
+DATABASE_URL="file:./dev.db"             # SQLite dev
+# DATABASE_URL="postgresql://user:pass@host:5432/inventory"  # prod
+
+# Auth Providers (opsional)
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+ENABLE_GOOGLE_SSO=false
+
+# Security
+RATE_LIMIT_LOGIN_PER_MIN=5
+SESSION_MAX_IDLE_MINUTES=30
+```
+
+### Skrip pnpm
+
+- `pnpm dev` — jalankan dev server
+- `pnpm prisma:generate` — generate client
+- `pnpm prisma:migrate` — migrasi schema
+- `pnpm db:seed` — seeding user & contoh data
+- `pnpm build` — build produksi
+- `pnpm start` — start server produksi
+- `pnpm test` — unit test kalkulasi stok & guard auth
+
+### Langkah Setup Lokal
+
+1. `pnpm install`
+2. Salin `.env.example` → `.env` dan isi nilai yang perlu.
+3. `pnpm prisma:generate && pnpm prisma:migrate`
+4. `pnpm db:seed`
+5. `pnpm dev` lalu buka `http://localhost:3000` (login admin: `admin@local` / `ChangeMe123!`).
+
+### Data Import (CSV)
+
+Sediakan template CSV per modul (MRD, FILLING, ADJ_IN, ADJ_OUT, TW) dengan header standar:
+
+- MRD: tanggal, mrdNo, itemCode, itemName, qty, warehouse, ket
+- FILLING: tanggal, fillingNo, productName, itemCode, karton, qty, warehouse, ket
+- ADJ_IN/OUT: tanggal, adNo, itemCode, itemName, qty, warehouse, ket
+- TW: tanggal, twNo, itemCode, itemName, qty, warehouseFrom, warehouseTo, ket
+
+Endpoint `POST /api/import/{module}` menerima CSV; lakukan preview & mapping kolom sebelum commit.
+
+### Deploy
+
+- **Vercel**: set `DATABASE_URL` (Postgres via Neon/Supabase), `NEXTAUTH_URL`, `NEXTAUTH_SECRET`. Jalankan `prisma migrate deploy` pada build.
+- **Docker**: siapkan `Dockerfile` + `docker-compose.yml` (service app + postgres).
+- Buat health check route `/api/health`.
+
+### Observability
+
+- Logging terstruktur (pino), error boundary, halaman 404/500 khusus.
+- Capture audit log & impor gagal (simpan file original untuk forensic).
+
+### Acceptance Criteria
+
+- Fresh clone → bisa jalan lokal ≤10 menit mengikuti README.
+- Deploy produksi dengan Postgres tanpa modifikasi kode > 3 baris (cukup ENV).
+- Seeding menciptakan 3 role & contoh transaksi agar dashboard langsung tampil.
+
+ 
 ## Bonus Prompt Singkat
 
 Build a Next.js + Prisma + SQLite Inventory Packaging app that mirrors these sheets: STOCK, BARANG MASUK (MRD), BARANG KELUAR (FILLING), ADJUST IN/OUT, TW. Implement movements (MRD, FILLING, ADJ_IN, ADJ_OUT, TW_IN, TW_OUT), stock formula opening + IN − OUT, opname vs system difference, CSV import/export, reports (day/week/month), role-based access, and pretty Tailwind + shadcn UI. Include seeds, tests, and README.
