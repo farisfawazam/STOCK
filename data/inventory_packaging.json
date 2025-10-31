@@ -1,0 +1,555 @@
+{
+  "STOCK": [
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "BTL-250",
+      "NAMA BARANG": "Botol PET 250ml",
+      "STOCK AWAL": 1200,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 1200,
+      "FISIK": 1175,
+      "SELISIH": -25,
+      "QTY PER 1 DUS": 100,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "BTL-500",
+      "NAMA BARANG": "Botol PET 500ml",
+      "STOCK AWAL": 900,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 900,
+      "FISIK": 940,
+      "SELISIH": 40,
+      "QTY PER 1 DUS": 80,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "CUP-200",
+      "NAMA BARANG": "Cup 200ml",
+      "STOCK AWAL": 1500,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 1500,
+      "FISIK": 1440,
+      "SELISIH": -60,
+      "QTY PER 1 DUS": 120,
+      "PERSENTASE": 0.0,
+      "KET": "CEK"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "CUP-500",
+      "NAMA BARANG": "Cup 500ml",
+      "STOCK AWAL": 700,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 700,
+      "FISIK": 700,
+      "SELISIH": 0,
+      "QTY PER 1 DUS": 100,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "CAP-BLK",
+      "NAMA BARANG": "Tutup Hitam 28mm",
+      "STOCK AWAL": 4000,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 4000,
+      "FISIK": 3920,
+      "SELISIH": -80,
+      "QTY PER 1 DUS": 500,
+      "PERSENTASE": 0.0,
+      "KET": "CEK"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "CAP-WHT",
+      "NAMA BARANG": "Tutup Putih 28mm",
+      "STOCK AWAL": 3800,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 3800,
+      "FISIK": 3920,
+      "SELISIH": 120,
+      "QTY PER 1 DUS": 500,
+      "PERSENTASE": 0.0,
+      "KET": "CEK"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "LBL-ORG",
+      "NAMA BARANG": "Label Orange 250ml",
+      "STOCK AWAL": 2500,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 2500,
+      "FISIK": 2350,
+      "SELISIH": -150,
+      "QTY PER 1 DUS": 1000,
+      "PERSENTASE": 0.0,
+      "KET": "CEK"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "BOX-SM",
+      "NAMA BARANG": "Dus Kecil 24x",
+      "STOCK AWAL": 600,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 600,
+      "FISIK": 630,
+      "SELISIH": 30,
+      "QTY PER 1 DUS": 50,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "BOX-LG",
+      "NAMA BARANG": "Dus Besar 12x",
+      "STOCK AWAL": 480,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 480,
+      "FISIK": 465,
+      "SELISIH": -15,
+      "QTY PER 1 DUS": 30,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "PCH-1L",
+      "NAMA BARANG": "Pouch 1 Liter",
+      "STOCK AWAL": 520,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 520,
+      "FISIK": 540,
+      "SELISIH": 20,
+      "QTY PER 1 DUS": 40,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "SPT-25",
+      "NAMA BARANG": "Spout 25mm",
+      "STOCK AWAL": 950,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 950,
+      "FISIK": 940,
+      "SELISIH": -10,
+      "QTY PER 1 DUS": 200,
+      "PERSENTASE": 0.0,
+      "KET": "JALAN"
+    },
+    {
+      "PERIODE": "Juni 2024",
+      "PERTANGGAL": "2024-06-07",
+      "KODE BARANG": "SEAL-AL",
+      "NAMA BARANG": "Seal Alumunium",
+      "STOCK AWAL": 1400,
+      "MRD": 0,
+      "FILLING": 0,
+      "STOCK AKHIR": 0,
+      "VENUS": 1400,
+      "FISIK": 1310,
+      "SELISIH": -90,
+      "QTY PER 1 DUS": 400,
+      "PERSENTASE": 0.0,
+      "KET": "CEK"
+    }
+  ],
+  "BARANG MASUK": [
+    {
+      "TANGGAL": "2024-06-01",
+      "MRD NO": "MRD-20240601-02",
+      "NAMA BARANG": "Botol PET 500ml",
+      "JUMLAH BARANG MASUK": 90,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-01",
+      "MRD NO": "MRD-20240601-04",
+      "NAMA BARANG": "Cup 500ml",
+      "JUMLAH BARANG MASUK": 170,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-01",
+      "MRD NO": "MRD-20240601-06",
+      "NAMA BARANG": "Tutup Putih 28mm",
+      "JUMLAH BARANG MASUK": 250,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-03",
+      "MRD NO": "MRD-20240603-01",
+      "NAMA BARANG": "Botol PET 250ml",
+      "JUMLAH BARANG MASUK": 70,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-03",
+      "MRD NO": "MRD-20240603-03",
+      "NAMA BARANG": "Cup 200ml",
+      "JUMLAH BARANG MASUK": 150,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-03",
+      "MRD NO": "MRD-20240603-05",
+      "NAMA BARANG": "Tutup Hitam 28mm",
+      "JUMLAH BARANG MASUK": 230,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "MRD NO": "MRD-20240604-02",
+      "NAMA BARANG": "Botol PET 500ml",
+      "JUMLAH BARANG MASUK": 80,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "MRD NO": "MRD-20240604-04",
+      "NAMA BARANG": "Cup 500ml",
+      "JUMLAH BARANG MASUK": 160,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "MRD NO": "MRD-20240604-06",
+      "NAMA BARANG": "Tutup Putih 28mm",
+      "JUMLAH BARANG MASUK": 240,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "MRD NO": "MRD-20240606-01",
+      "NAMA BARANG": "Botol PET 250ml",
+      "JUMLAH BARANG MASUK": 60,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "MRD NO": "MRD-20240606-03",
+      "NAMA BARANG": "Cup 200ml",
+      "JUMLAH BARANG MASUK": 140,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "MRD NO": "MRD-20240606-05",
+      "NAMA BARANG": "Tutup Hitam 28mm",
+      "JUMLAH BARANG MASUK": 220,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-07",
+      "MRD NO": "MRD-20240607-02",
+      "NAMA BARANG": "Botol PET 500ml",
+      "JUMLAH BARANG MASUK": 110,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-07",
+      "MRD NO": "MRD-20240607-04",
+      "NAMA BARANG": "Cup 500ml",
+      "JUMLAH BARANG MASUK": 190,
+      "KET": "Restock rutin"
+    },
+    {
+      "TANGGAL": "2024-06-07",
+      "MRD NO": "MRD-20240607-06",
+      "NAMA BARANG": "Tutup Putih 28mm",
+      "JUMLAH BARANG MASUK": 270,
+      "KET": "Restock rutin"
+    }
+  ],
+  "BARANG KELUAR": [
+    {
+      "TANGGAL": "2024-06-01",
+      "NO FILLING": "FL-20240601-02",
+      "NAMA PRODUK": "Botol PET 500ml",
+      "KARTON": 1,
+      "JUMLAH BARANG KELUAR": 82,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-01",
+      "NO FILLING": "FL-20240601-05",
+      "NAMA PRODUK": "Tutup Hitam 28mm",
+      "KARTON": 3,
+      "JUMLAH BARANG KELUAR": 187,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-01",
+      "NO FILLING": "FL-20240601-08",
+      "NAMA PRODUK": "Dus Kecil 24x",
+      "KARTON": 5,
+      "JUMLAH BARANG KELUAR": 292,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-01",
+      "NO FILLING": "FL-20240601-11",
+      "NAMA PRODUK": "Spout 25mm",
+      "KARTON": 7,
+      "JUMLAH BARANG KELUAR": 397,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-02",
+      "NO FILLING": "FL-20240602-03",
+      "NAMA PRODUK": "Cup 200ml",
+      "KARTON": 2,
+      "JUMLAH BARANG KELUAR": 129,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-02",
+      "NO FILLING": "FL-20240602-06",
+      "NAMA PRODUK": "Tutup Putih 28mm",
+      "KARTON": 4,
+      "JUMLAH BARANG KELUAR": 234,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-02",
+      "NO FILLING": "FL-20240602-09",
+      "NAMA PRODUK": "Dus Besar 12x",
+      "KARTON": 6,
+      "JUMLAH BARANG KELUAR": 339,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-02",
+      "NO FILLING": "FL-20240602-12",
+      "NAMA PRODUK": "Seal Alumunium",
+      "KARTON": 8,
+      "JUMLAH BARANG KELUAR": 444,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "NO FILLING": "FL-20240604-01",
+      "NAMA PRODUK": "Botol PET 250ml",
+      "KARTON": 1,
+      "JUMLAH BARANG KELUAR": 83,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "NO FILLING": "FL-20240604-04",
+      "NAMA PRODUK": "Cup 500ml",
+      "KARTON": 3,
+      "JUMLAH BARANG KELUAR": 188,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "NO FILLING": "FL-20240604-07",
+      "NAMA PRODUK": "Label Orange 250ml",
+      "KARTON": 5,
+      "JUMLAH BARANG KELUAR": 293,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "NO FILLING": "FL-20240604-10",
+      "NAMA PRODUK": "Pouch 1 Liter",
+      "KARTON": 7,
+      "JUMLAH BARANG KELUAR": 398,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO FILLING": "FL-20240605-02",
+      "NAMA PRODUK": "Botol PET 500ml",
+      "KARTON": 1,
+      "JUMLAH BARANG KELUAR": 70,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO FILLING": "FL-20240605-05",
+      "NAMA PRODUK": "Tutup Hitam 28mm",
+      "KARTON": 3,
+      "JUMLAH BARANG KELUAR": 175,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO FILLING": "FL-20240605-08",
+      "NAMA PRODUK": "Dus Kecil 24x",
+      "KARTON": 5,
+      "JUMLAH BARANG KELUAR": 280,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO FILLING": "FL-20240605-11",
+      "NAMA PRODUK": "Spout 25mm",
+      "KARTON": 7,
+      "JUMLAH BARANG KELUAR": 385,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO FILLING": "FL-20240606-03",
+      "NAMA PRODUK": "Cup 200ml",
+      "KARTON": 2,
+      "JUMLAH BARANG KELUAR": 117,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO FILLING": "FL-20240606-06",
+      "NAMA PRODUK": "Tutup Putih 28mm",
+      "KARTON": 4,
+      "JUMLAH BARANG KELUAR": 222,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO FILLING": "FL-20240606-09",
+      "NAMA PRODUK": "Dus Besar 12x",
+      "KARTON": 6,
+      "JUMLAH BARANG KELUAR": 327,
+      "KET": "Pemakaian produksi"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO FILLING": "FL-20240606-12",
+      "NAMA PRODUK": "Seal Alumunium",
+      "KARTON": 8,
+      "JUMLAH BARANG KELUAR": 432,
+      "KET": "Pemakaian produksi"
+    }
+  ],
+  "ADJUST IN": [
+    {
+      "TANGGAL": "2024-06-02",
+      "NO AD": "ADIN-001",
+      "NAMA BARANG": "Botol PET 250ml",
+      "JUMLAH BARANG MASUK": 120,
+      "KET": "Koreksi penerimaan selisih PO"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO AD": "ADIN-002",
+      "NAMA BARANG": "Dus Besar 12x",
+      "JUMLAH BARANG MASUK": 45,
+      "KET": "Penyesuaian stok hasil recount"
+    }
+  ],
+  "ADJUST OUT": [
+    {
+      "TANGGAL": "2024-06-03",
+      "NO AD": "ADOUT-001",
+      "NAMA BARANG": "Tutup Hitam 28mm",
+      "JUMLAH BARANG KELUAR": 200,
+      "KET": "Reject kualitas"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO AD": "ADOUT-002",
+      "NAMA BARANG": "Seal Alumunium",
+      "JUMLAH BARANG KELUAR": 150,
+      "KET": "Kehilangan saat handling"
+    },
+    {
+      "TANGGAL": "2024-06-07",
+      "NO AD": "ADOUT-003",
+      "NAMA BARANG": "Botol PET 500ml",
+      "JUMLAH BARANG KELUAR": 60,
+      "KET": "Sample QC massal"
+    }
+  ],
+  "TW": [
+    {
+      "TANGGAL": "2024-06-01",
+      "NO TW": "TW-001",
+      "NAMA BARANG": "Botol PET 250ml",
+      "JUMLAH BARANG KELUAR": 180,
+      "KET": "VENUS -> PRODUKSI"
+    },
+    {
+      "TANGGAL": "2024-06-02",
+      "NO TW": "TW-002",
+      "NAMA BARANG": "Dus Kecil 24x",
+      "JUMLAH BARANG KELUAR": 60,
+      "KET": "VENUS -> FG"
+    },
+    {
+      "TANGGAL": "2024-06-03",
+      "NO TW": "TW-003",
+      "NAMA BARANG": "Botol PET 500ml",
+      "JUMLAH BARANG KELUAR": 150,
+      "KET": "PRODUKSI -> VENUS"
+    },
+    {
+      "TANGGAL": "2024-06-04",
+      "NO TW": "TW-004",
+      "NAMA BARANG": "Label Orange 250ml",
+      "JUMLAH BARANG KELUAR": 300,
+      "KET": "VENUS -> PACKING"
+    },
+    {
+      "TANGGAL": "2024-06-05",
+      "NO TW": "TW-005",
+      "NAMA BARANG": "Cup 200ml",
+      "JUMLAH BARANG KELUAR": 220,
+      "KET": "QA -> VENUS"
+    },
+    {
+      "TANGGAL": "2024-06-06",
+      "NO TW": "TW-006",
+      "NAMA BARANG": "Dus Besar 12x",
+      "JUMLAH BARANG KELUAR": 90,
+      "KET": "VENUS -> FG"
+    },
+    {
+      "TANGGAL": "2024-06-07",
+      "NO TW": "TW-007",
+      "NAMA BARANG": "Pouch 1 Liter",
+      "JUMLAH BARANG KELUAR": 140,
+      "KET": "FG -> VENUS"
+    }
+  ]
+}
